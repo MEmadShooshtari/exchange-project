@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="534.0" prefWidth="744.0" style="-fx-background-color: #c7a479;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.exchange.HomePage">
+   <children>
+      <Button fx:id="signout" layoutX="24.0" layoutY="483.0" mnemonicParsing="false" onAction="#onSignOutClicked" style="-fx-background-radius: 15; -fx-background-color: #382e18;" text="sign out" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <TableView fx:id="table" blendMode="DARKEN" layoutX="59.0" layoutY="174.0" prefHeight="154.0" prefWidth="626.0" style="-fx-background-color: white;">
+        <columns>
+          <TableColumn fx:id="currencies" prefWidth="125.0" text="Currencies" />
+          <TableColumn fx:id="price" prefWidth="125.0" text="Price" />
+            <TableColumn fx:id="changes" prefWidth="125.0" text="Changes" />
+            <TableColumn fx:id="highest" prefWidth="125.0" text="Highest" />
+            <TableColumn fx:id="lowest" prefWidth="125.0" text="Lowest" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Button fx:id="exchangebutton" layoutX="232.0" layoutY="83.0" mnemonicParsing="false" onAction="#onExchangeClicked" prefHeight="46.0" prefWidth="114.0" style="-fx-background-color: #96311d; -fx-background-radius: 25;" text="exchange" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="profilebutton" layoutX="79.0" layoutY="83.0" mnemonicParsing="false" onAction="#onProfileClicked" prefHeight="46.0" prefWidth="97.0" style="-fx-background-color: #96311d; -fx-background-radius: 25;" text="profile" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="transferbutton" layoutX="413.0" layoutY="83.0" mnemonicParsing="false" onAction="#onTransferClicked" prefHeight="46.0" prefWidth="98.0" style="-fx-background-color: #96311d; -fx-background-radius: 25;" text="transfer" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label fx:id="timelabel" layoutX="612.0" layoutY="20.0" prefHeight="30.0" prefWidth="127.0" text="time">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="tomanbutton" layoutX="338.0" layoutY="388.0" mnemonicParsing="false" onAction="#onTomanClicked" prefHeight="30.0" prefWidth="71.0" style="-fx-background-color: #568ee8; -fx-background-radius: 20;" text="TOMAN" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="usdbutton" layoutX="93.0" layoutY="388.0" mnemonicParsing="false" onAction="#onUsdClicked" prefHeight="30.0" prefWidth="71.0" style="-fx-background-color: #568ee8; -fx-background-radius: 20;" text="USD" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="eurbutton" layoutX="218.0" layoutY="388.0" mnemonicParsing="false" onAction="#onEurClicked" prefHeight="30.0" prefWidth="71.0" style="-fx-background-color: #568ee8; -fx-background-radius: 20;" text="EUR" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="yenbutton" layoutX="462.0" layoutY="388.0" mnemonicParsing="false" onAction="#onYenClicked" prefHeight="30.0" prefWidth="71.0" style="-fx-background-color: #568ee8; -fx-background-radius: 20;" text="YEN" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="gbpbutton" layoutX="589.0" layoutY="388.0" mnemonicParsing="false" onAction="#onGbpClicked" prefHeight="30.0" prefWidth="71.0" style="-fx-background-color: #568ee8; -fx-background-radius: 20;" text="GBP" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label fx:id="homelabel" layoutX="41.0" layoutY="15.0" prefHeight="38.0" prefWidth="90.0" text="Home">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <Line fx:id="homeline" endX="105.4000244140625" endY="7.62939453125E-6" layoutX="61.0" layoutY="55.0" startX="-29.299999237060547" startY="7.62939453125E-6" strokeWidth="3.0" />
+      <Button fx:id="back" layoutX="35.0" layoutY="482.0" mnemonicParsing="false" onAction="#onBackClicked" style="-fx-background-color: #382e18; -fx-background-radius: 15;" text="back" textFill="WHITE" visible="false">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label fx:id="usdlabel" layoutX="46.0" layoutY="15.0" prefHeight="30.0" prefWidth="62.0" text="USD" visible="false">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <Label fx:id="pricetitle" layoutX="45.0" layoutY="91.0" prefHeight="18.0" prefWidth="54.0" text="Price:" textFill="#0d996a" visible="false">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="usdpricelabel" layoutX="59.0" layoutY="129.0" prefHeight="46.0" prefWidth="139.0" text="usdprice" visible="false">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="changetitle" layoutX="43.0" layoutY="188.0" text="Changes:" textFill="#0d996a" visible="false">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="usdchangelabel" layoutX="60.0" layoutY="236.0" prefHeight="30.0" prefWidth="86.0" text="usdchange" visible="false">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="eurpricelabel" layoutX="59.0" layoutY="129.0" prefHeight="46.0" prefWidth="139.0" text="eurprice" visible="false">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="gbppricelabel" layoutX="59.0" layoutY="129.0" prefHeight="46.0" prefWidth="139.0" text="gbpprice" visible="false">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="yenpricelabel" layoutX="59.0" layoutY="129.0" prefHeight="46.0" prefWidth="139.0" text="yenprice" visible="false">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="tomanpricelabel" layoutX="59.0" layoutY="129.0" prefHeight="46.0" prefWidth="139.0" text="tomanprice" visible="false">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="tomanchangelabel" layoutX="61.0" layoutY="236.0" prefHeight="30.0" prefWidth="114.0" text="tomanchange" visible="false">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="eurchangelabel" layoutX="61.0" layoutY="236.0" prefHeight="30.0" prefWidth="86.0" text="eurchange" visible="false">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="yenchangelabel" layoutX="61.0" layoutY="236.0" prefHeight="30.0" prefWidth="86.0" text="yenchange" visible="false">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="gbpchangelabel" layoutX="60.0" layoutY="236.0" prefHeight="30.0" prefWidth="86.0" text="gbpchange" visible="false">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="gbplabel" layoutX="42.0" layoutY="15.0" prefHeight="30.0" prefWidth="62.0" text="GBP" visible="false">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <Label fx:id="yenlabel" layoutX="41.0" layoutY="15.0" prefHeight="30.0" prefWidth="62.0" text="YEN" visible="false">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <Label fx:id="tomanlabel" layoutX="46.0" layoutY="15.0" prefHeight="40.0" prefWidth="106.0" text="TOMAN" visible="false">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <Label fx:id="eurlabel" layoutX="42.0" layoutY="15.0" prefHeight="30.0" prefWidth="62.0" text="EUR" visible="false">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <Label fx:id="transferlabel" layoutX="40.0" layoutY="15.0" prefHeight="40.0" prefWidth="114.0" text="Transfer" visible="false">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <TextField fx:id="walletidfield" layoutX="263.0" layoutY="152.0" prefHeight="30.0" prefWidth="221.0" promptText="wallet ID" visible="false">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="amountfield" layoutX="261.0" layoutY="252.0" prefHeight="30.0" prefWidth="221.0" promptText="amount" visible="false">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </TextField>
+      <CheckBox fx:id="usdcheck" layoutX="128.0" layoutY="143.0" mnemonicParsing="false" onAction="#onusdcheckClicked" text="USD" visible="false">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="eurcheck" layoutX="129.0" layoutY="175.0" mnemonicParsing="false" onAction="#oneurcheckClicked" text="EUR" visible="false">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="gbpcheck" layoutX="129.0" layoutY="276.0" mnemonicParsing="false" onAction="#ongbpcheckClicked" text="GBP" visible="false">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="tomancheck" layoutX="129.0" layoutY="208.0" mnemonicParsing="false" onAction="#ontomancheckClicked" prefHeight="18.0" prefWidth="71.0" text="TOMAN" visible="false">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </CheckBox>
+      <CheckBox fx:id="yencheck" layoutX="129.0" layoutY="242.0" mnemonicParsing="false" onAction="#onyencheckClicked" text="YEN" visible="false">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </CheckBox>
+      <Label fx:id="walletnotfound" layoutX="320.0" layoutY="134.0" text="wallet ID not found" textFill="RED" visible="false" />
+      <Button fx:id="transfertransfer" layoutX="324.0" layoutY="341.0" mnemonicParsing="false" onAction="#ontransfertransferClicked" prefHeight="46.0" prefWidth="98.0" style="-fx-background-color: #96311d; -fx-background-radius: 25;" text="transfer" textFill="WHITE" visible="false">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label fx:id="transferfee" layoutX="263.0" layoutY="209.0" prefHeight="22.0" prefWidth="98.0" text="transfer fee :" visible="false">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="fee" layoutX="373.0" layoutY="209.0" prefHeight="22.0" prefWidth="130.0" text="Label" textFill="#0d996a" visible="false">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="checklabel" layoutX="69.0" layoutY="120.0" text="please choose one of currencies" textFill="RED" visible="false" />
+      <Label fx:id="amountlabel" layoutX="296.0" layoutY="233.0" text="please enter the amount" textFill="RED" visible="false" />
+      <Button fx:id="swapbutton" layoutX="579.0" layoutY="83.0" mnemonicParsing="false" onAction="#onSwapClicked" prefHeight="46.0" prefWidth="90.0" style="-fx-background-color: #96311d; -fx-background-radius: 25;" text="swap" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label fx:id="volumetitle" layoutX="43.0" layoutY="285.0" text="Volume Of Transactions:" textFill="#0d996a" visible="false">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="usdvolume" layoutX="56.0" layoutY="335.0" prefHeight="30.0" prefWidth="127.0" text="usdvolume" visible="false">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="eurvolume" layoutX="58.0" layoutY="335.0" prefHeight="30.0" prefWidth="139.0" text="eurvolume" visible="false">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="tomanvolume" layoutX="58.0" layoutY="335.0" prefHeight="30.0" prefWidth="139.0" text="tomanvolume" visible="false">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="yenvolume" layoutX="61.0" layoutY="335.0" prefHeight="30.0" prefWidth="114.0" text="yenvolume" visible="false">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="gbpvolume" layoutX="61.0" layoutY="335.0" prefHeight="30.0" prefWidth="114.0" text="gbpvolume" visible="false">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="lasttradetitel" layoutX="43.0" layoutY="388.0" text="Last Trade:" textFill="#0d996a" visible="false">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="usdlasttrade" layoutX="56.0" layoutY="432.0" prefHeight="30.0" prefWidth="453.0" text="lasttrade" visible="false">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="eurlasttrade" layoutX="56.0" layoutY="432.0" prefHeight="30.0" prefWidth="454.0" text="lasttrade" visible="false">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="tomanlasttrade" layoutX="56.0" layoutY="432.0" prefHeight="30.0" prefWidth="454.0" text="lasttrade" visible="false">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="yenlasttrade" layoutX="56.0" layoutY="432.0" prefHeight="30.0" prefWidth="454.0" text="lasttrade" visible="false">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="gbplasttrade" layoutX="56.0" layoutY="432.0" prefHeight="30.0" prefWidth="454.0" text="lasttrade" visible="false">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

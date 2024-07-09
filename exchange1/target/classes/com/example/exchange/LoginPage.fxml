@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="573.0" prefWidth="766.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.exchange.LoginPage">
+    <children>
+        <AnchorPane layoutX="95.0" layoutY="55.0" prefHeight="463.0" prefWidth="575.0" style="-fx-background-color: #c7a479; -fx-background-radius: 15;">
+            <children>
+                <TextField fx:id="usernamefieldlogin" layoutX="194.0" layoutY="148.0" prefHeight="32.0" prefWidth="187.0" promptText="username">
+                    <font>
+                        <Font name="System Italic" size="12.0" />
+                    </font>
+                </TextField>
+                <PasswordField fx:id="passwordfieldlogin" layoutX="194.0" layoutY="202.0" prefHeight="32.0" prefWidth="187.0" promptText="password">
+                    <font>
+                        <Font name="System Italic" size="12.0" />
+                    </font>
+                </PasswordField>
+                <Button fx:id="sumbit" layoutX="240.0" layoutY="338.0" mnemonicParsing="false" onAction="#onSubmitClicked" prefHeight="42.0" prefWidth="94.0" style="-fx-background-color: #96311d; -fx-background-radius: 25;" text="submit" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+                <ImageView fitHeight="70.0" fitWidth="74.0" layoutX="253.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@7853767_kashifarif_user_profile_person_account_icon.png" />
+                    </image>
+                </ImageView>
+                <Label fx:id="login" layoutX="252.0" layoutY="93.0" prefHeight="36.0" prefWidth="70.0" text="Login" textAlignment="CENTER">
+                    <font>
+                        <Font name="System Bold" size="25.0" />
+                    </font>
+                </Label>
+                <Button fx:id="signuplogin" layoutX="474.0" layoutY="407.0" mnemonicParsing="false" onAction="#onSignupLoginClicked" prefHeight="31.0" prefWidth="58.0" style="-fx-background-radius: 20; -fx-background-color: #382e18;" text="sign up" textFill="WHITE">
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+                <Label fx:id="notAMember" layoutX="366.0" layoutY="409.0" prefHeight="26.0" prefWidth="102.0" text="not a member?">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Label>
+                <Label fx:id="creat" layoutX="209.0" layoutY="101.0" text="Creat Account" visible="false">
+                    <font>
+                        <Font name="System Bold" size="25.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="usernamefieldsignup" layoutX="42.0" layoutY="167.0" promptText="username" visible="false">
+                    <font>
+                        <Font name="System Italic" size="12.0" />
+                    </font>
+                </TextField>
+                <PasswordField fx:id="passwordfieldsignup" layoutX="43.0" layoutY="218.0" promptText="password" visible="false">
+                    <font>
+                        <Font name="System Italic" size="12.0" />
+                    </font>
+                </PasswordField>
+                <PasswordField fx:id="passwordfieldsignuprepeated" layoutX="44.0" layoutY="265.0" promptText="repeat password" visible="false">
+                    <font>
+                        <Font name="System Italic" size="12.0" />
+                    </font>
+                </PasswordField>
+                <Button fx:id="signupsignup" layoutX="227.0" layoutY="392.0" mnemonicParsing="false" onAction="#onSignUpClicked" prefHeight="36.0" prefWidth="118.0" style="-fx-background-radius: 25; -fx-background-color: #96311d;" text="sign up" textFill="#fcfcfc" visible="false">
+                    <font>
+                        <Font name="Arial Bold" size="18.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+            <Button fx:id="forgotpass" layoutX="34.0" layoutY="410.0" mnemonicParsing="false" onAction="#onForgotClicked" prefHeight="26.0" prefWidth="124.0" style="-fx-background-color: #382e18; -fx-background-radius: 20;" text="forgot password?" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <TextField fx:id="firstname" layoutX="213.0" layoutY="168.0" promptText="first  name" visible="false">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="lastname" layoutX="387.0" layoutY="168.0" promptText="last name" visible="false">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="email" layoutX="259.0" layoutY="217.0" prefHeight="26.0" prefWidth="268.0" promptText="email" visible="false">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="phonenumber" layoutX="259.0" layoutY="264.0" prefHeight="26.0" prefWidth="268.0" promptText="phone number" visible="false">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </TextField>
+            <AnchorPane layoutX="70.0" layoutY="146.0">
+               <children>
+                  <Label fx:id="usernameSignupInvalid" prefHeight="18.0" prefWidth="90.0" text="invalid username" textFill="#f70303" visible="false" />
+               </children>
+            </AnchorPane>
+            <Label fx:id="firstnameInvalid" layoutX="242.0" layoutY="146.0" text="invalid firstname" textFill="RED" visible="false" />
+            <Label fx:id="lastnameInvalid" layoutX="418.0" layoutY="146.0" text="invalid lastname" textFill="RED" visible="false" />
+            <Label fx:id="passwordSignupInvalid" layoutX="71.0" layoutY="194.0" text="invalid password" textFill="RED" visible="false" />
+            <Label fx:id="repeatedpasswordInvalid" layoutX="65.0" layoutY="244.0" text="different password" textFill="RED" visible="false" />
+            <Label fx:id="emailInvalid" layoutX="351.0" layoutY="194.0" text="invalid email" textFill="RED" visible="false" />
+            <Label fx:id="phonenumberInvalid" layoutX="336.0" layoutY="244.0" text="invalid phonenumber" textFill="RED" visible="false" />
+            <Label fx:id="usernameloginInvalid" layoutX="234.0" layoutY="128.0" text="username not found" textFill="RED" visible="false" />
+            <Label fx:id="passwordLoginInvalid" layoutX="243.0" layoutY="185.0" text="wrong password" textFill="RED" visible="false" />
+            <Label fx:id="ForgotPassForgot" layoutX="189.0" layoutY="101.0" text="Forgot Password" visible="false">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <TextField fx:id="EmailForgottextfield" layoutX="152.0" layoutY="242.0" prefHeight="37.0" prefWidth="268.0" promptText="email" visible="false">
+               <font>
+                  <Font name="System Italic" size="16.0" />
+               </font>
+            </TextField>
+            <Label fx:id="EnterEmail" layoutX="147.0" layoutY="193.0" prefHeight="20.0" prefWidth="281.0" text="Enter your email to recieve your password" visible="false">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="continueButton" layoutX="241.0" layoutY="309.0" mnemonicParsing="false" onAction="#OnForgetPassClicked" prefHeight="42.0" prefWidth="94.0" style="-fx-background-color: #96311d; -fx-background-radius: 25;" text="continue" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="back" layoutX="26.0" layoutY="407.0" mnemonicParsing="false" onAction="#onBackClicked" prefHeight="31.0" prefWidth="70.0" style="-fx-background-radius: 20; -fx-background-color: #382e18;" text="back" textFill="WHITE" visible="false">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <ImageView fx:id="captchaimage" fitHeight="32.0" fitWidth="102.0" layoutX="253.0" layoutY="261.0" pickOnBounds="true" preserveRatio="true" />
+            <TextField fx:id="captchatextfield" layoutX="236.0" layoutY="299.0" prefHeight="26.0" prefWidth="102.0" promptText="captcha">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </TextField>
+            <Label fx:id="invalidcaptcha" layoutX="252.0" layoutY="244.0" text="invalid captcha" textFill="RED" visible="false" />
+            <ImageView fx:id="captchaimagesignup" fitHeight="32.0" fitWidth="102.0" layoutX="253.0" layoutY="322.0" pickOnBounds="true" preserveRatio="true" />
+            <TextField fx:id="captchatextfieldsignup" layoutX="235.0" layoutY="359.0" prefHeight="26.0" prefWidth="102.0" promptText="captcha" visible="false">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </TextField>
+            <Label fx:id="invalidcaptchasignup" layoutX="246.0" layoutY="295.0" text="invalid captcha" textFill="RED" visible="false" />
+            <Button fx:id="refresh" layoutX="347.0" layoutY="299.0" mnemonicParsing="false" onAction="#oncaptchaclicked" prefHeight="18.0" prefWidth="29.0" style="-fx-background-radius: 20; -fx-background-color: black;" text="♻" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="refreshsignup" layoutX="347.0" layoutY="359.0" mnemonicParsing="false" onAction="#oncaptchasignupclicked" prefHeight="18.0" prefWidth="29.0" style="-fx-background-radius: 20; -fx-background-color: black;" text="♻" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label fx:id="emailnotfound" layoutX="246.0" layoutY="221.0" text="email not found" textFill="RED" visible="false" />
+            <PasswordField fx:id="repeatnewpasswordfieldforget" layoutX="212.0" layoutY="296.0" promptText="repeat new password" visible="false">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </PasswordField>
+            <PasswordField fx:id="newpasswordfieldforget" layoutX="211.0" layoutY="240.0" promptText="new password" visible="false">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </PasswordField>
+            <Label fx:id="passwordInvalid" layoutX="241.0" layoutY="222.0" text="invalid password" textFill="RED" visible="false" />
+            <Label fx:id="repeatedpasswordInvalidforget" layoutX="235.0" layoutY="279.0" text="different password" textFill="RED" visible="false" />
+            <Label fx:id="passwordInvalidrecieved" layoutX="243.0" layoutY="171.0" text="invalid password" textFill="RED" visible="false" />
+            <Button fx:id="forgetcheckbutton" layoutX="253.0" layoutY="337.0" mnemonicParsing="false" onAction="#onforgetcheckbuttonclicked" prefHeight="43.0" prefWidth="70.0" style="-fx-background-radius: 20; -fx-background-color: #96311d;" text="✅" textFill="WHITE" visible="false">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <TextField fx:id="passwordfieldforget" layoutX="213.0" layoutY="189.0" promptText="received password" visible="false">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </TextField>
+            <Label fx:id="time" layoutX="450.0" layoutY="14.0" prefHeight="30.0" prefWidth="124.0" text="time">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            </children>
+        </AnchorPane>
+          <Button fx:id="exit" layoutX="24.0" layoutY="525.0" mnemonicParsing="false" onAction="#onExitClicked" prefHeight="27.0" prefWidth="46.0" style="-fx-background-radius: 20; -fx-background-color: #382e18;" text="exit" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label fx:id="emailInvalid1" layoutX="502.0" layoutY="427.0" text="invalid email" textFill="RED" visible="false" />
+    </children>
+</AnchorPane>
